@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UGC Naomi P</title>
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,100;0,200;0,300;0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+
+
+      .phone-video-category-wrapper {
+        /*position: relative;*/
+        /*width: 500px; !* Adjust to match your frame *!*/
+        height: auto;
+        overflow: hidden;
+      }
+      .phone-video-wrapper {
+        position: relative;
+      }
+      .phone-frame {
+        /* width: 100%; */
+        display: block;
+        width: 135px;
+        margin-bottom: 13px;
+        position: relative;
+        z-index: 1;
+      }
+      .in-phone-video-wrapper {
+        border-radius: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        overflow: hidden;
+        margin: 5px;
+      }
+      .in-phone-video {
+        left: 50%;
+        top: 0;
+        height: 100%;
+        transform: translateX(-50%);
+        position: relative;
+      }
+
+
+
+
+
+
+
+
+      body {
+        font-family: "Cardo", serif;
+        text-align: center;
+        background: #f6edec;
+        /*background: darkslategrey;*/
+        margin: 0;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          padding-top: 0;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          padding-top: 4vw;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {
+          padding-top: 40px;
+        }
+        @media (min-width: 1150px) {}
+      }
+
+      nav {
+        font-family: sans-serif;
+        background: white;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        z-index: 2;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          display: none;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          display: flex;
+          width: calc(100% - 2vw);
+          font-size: 2vw;
+          padding: 1vw;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {
+          width: calc(100% - 40px);
+          font-size: 20px;
+          padding: 10px 20px;
+        }
+        @media (min-width: 1150px) {
+          width: calc(100% - 120px);
+          padding: 10px 60px;
+        }
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: black;
+        font-weight: normal;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .nav-link::after {
+        content: '';
+        width: 0;
+        height: 1px;
+        display: block;
+        background: black;
+        transition: 300ms;
+      }
+
+      .nav-link.active {
+        font-weight: bold;
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .hero {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        max-height: 95vh;
+      }
+
+      .hero-text-links {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      .hero-text-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-text {
+        width: 75%;
+      }
+
+      .hero-links {
+        display: flex;
+        width: 32%;
+        flex: 1;
+        justify-content: space-between;
+      }
+
+      .hero-link {
+        flex: 1;
+        margin: 10% 3% 0;
+      }
+
+      .hero-link img {
+        width: 100%;
+      }
+
+      .hero-image-wrapper {
+        width: 40%;
+      }
+
+      .hero-image {
+        width: 100%;
+        display: block;
+      }
+
+      .section-padding {
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          margin-top: -4vw;
+          padding-top: 4vw;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {
+          margin-top: -35px;
+          padding-top: 35px;
+        }
+        @media (min-width: 1150px) {}
+      }
+
+      .shared-skeleton {
+        border: 1px solid red;
+        margin: 0 30px 30px;
+      }
+
+      .shared-skeleton-header {
+        border: 1px solid blue;
+      }
+
+      .shared-skeleton-body {
+        border: 1px solid green;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .shared-skeleton-photo-wrapper {
+        border: 1px solid purple;
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          min-width: 260px;
+          width: 260px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
+      }
+
+      .shared-skeleton-photo {
+        width: 100%;
+        display: block;
+      }
+
+      .shared-skeleton-content {
+        border: 1px solid pink;
+        flex: 1;
+      }
+
+      .about-me-header {
+        position: relative;
+      }
+
+      .about-me-header-hello {
+        margin-bottom: 0 !important;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 55px !important;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 70px !important;
+        }
+        @media (min-width: 1030px) {
+          font-size: 90px !important;
+        }
+        @media (min-width: 1150px) {}
+      }
+
+      .about-me-header-im-naomi {
+        color: #d9c0c5;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: italic;
+        position: absolute;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          top: 0;
+          left: 51%;
+          transform: translate(12%, 57%);
+          font-size: 51px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          top: 0;
+          left: 51%;
+          transform: translate(12%, 63%);
+          font-size: 63px;
+        }
+        @media (min-width: 1030px) {
+          top: 0;
+          left: 52%;
+          transform: translate(10%, 62%);
+          font-size: 80px;
+        }
+        @media (min-width: 1150px) {}
+      }
+
+      .about-me-main-text-hi {
+        margin-top: 40px;
+        font-size: 15px;
+      }
+
+      .about-me-main-text-age {
+        margin-top: 30px;
+        font-size: 14px;
+      }
+
+      .shared-header {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 15px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 40px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 55px;
+        }
+        @media (min-width: 1030px) {
+          font-size: 70px;
+        }
+        @media (min-width: 1150px) {}
+      }
+
+
+
+      .my-work-body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 50px;
+        justify-content: space-between;
+        gap: 70px 50px;
+      }
+
+
+
+
+
+
+      .my-work-item-category {
+        font-size: 26px;
+        font-family: "Open Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+
+
+
+
+
+
+
+
+
+      .scroll-container {
+        /*position: absolute;*/
+        position: relative;
+        width: 100vw;
+        /*height: 100vh;*/
+        /*height: 350px;*/
+        height: calc(29vw + 113px);
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+
+
+
+
+
+      .photography-body-3 {
+        top: 0;
+        bottom: 0;
+
+
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+        display: flex;
+        width: 218%;
+        justify-content: space-between;
+        position: absolute;
+        /*height: 100%;*/
+        animation: scroll2 64s linear infinite;
+        border: 1px solid green;
+        animation-delay: 32s;
+        /*left: -218%;*/
+        /*left: -218%;*/
+        left: 100%;
+      }
+
+      @keyframes scroll3 {
+
+
+
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+
+
+        from {
+          /*left: -100%;*/
+          left: -218%;
+          /*left: 0%;*/
+        }
+        to {
+          /*left: 109%;*/
+          left: 218%;
+          /*left: 109%;*/
+        }
+      }
+
+
+
+
+      .photography-body-2 {
+        top: 0;
+        bottom: 0;
+
+
+
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+
+        display: flex;
+        width: 218%;
+        justify-content: space-between;
+        position: absolute;
+        /*height: 100%;*/
+        animation: scroll2 64s linear infinite;
+        border: 1px solid blue;
+        /*left: -218%;*/
+        /*left: -218%;*/
+        /*left: 100%;*/
+        left: -218%;
+      }
+
+      @keyframes scroll2 {
+
+
+
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+
+
+
+        from {
+          /*left: -100%;*/
+          left: -218%;
+          /*left: 0%;*/
+        }
+        to {
+          /*left: 109%;*/
+          left: 218%;
+          /*left: 109%;*/
+        }
+      }
+
+
+
+
+      .photography-body-1 {
+        top: 0;
+        bottom: 0;
+
+
+
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+        /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+
+
+
+
+        display: flex;
+        width: 109%;
+        justify-content: space-between;
+        position: absolute;
+        /*height: 100%;*/
+        animation: scroll1 16s linear;
+        border: 1px solid red;
+        /*left: 0;*/
+        /*left: -109%;*/
+        left: 109%;
+      }
+
+      @keyframes scroll1 {
+
+
+
+
+
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+      /*IT WORKS NOW DONT BREAK IT*/
+
+
+
+
+
+        from {
+          left: 0;
+        }
+        to {
+          /*left: 109%;*/
+          /*left: 0;*/
+          /*left: 109%;*/
+          left: 109%;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .photography-item-wrapper {
+        /*flex: 1;*/
+        min-width: 0;
+        margin: 5px;
+      }
+
+      .photography-item-top-margin {
+        margin-top: 100px;
+      }
+
+      .photography-item {
+        width: 100%;
+        border-radius: 13px;
+      }
+
+
+
+
+
+
+
+
+
+
+      .services-offered-texts-wrapper {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 100%;
+        justify-content: center;
+        margin: 0 35px;
+      }
+
+      .services-offered-text {
+        border-radius: 100px;
+        padding: 10px;
+      }
+
+      .services-offered-text-1 {
+        background: #d9c0c5;
+      }
+
+      .services-offered-text-2 {
+        background: #e8c9cf;
+      }
+
+      .services-offered-text-3 {
+        background: #e2d0d3;
+      }
+
+      .services-offered-text-4 {
+        background: #dbd2d1;
+      }
+
+      .the-process-texts-arrows-wrapper {
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+      }
+
+      .the-process-text-arrow-wrapper {
+        color: white;
+        width: calc(100% - 32px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 78px;
+        max-height: 78px;
+        min-height: 78px;
+        position: relative;
+      }
+
+      .the-process-text-arrow-wrapper-1 {
+        background: #d9c0c5;
+      }
+
+      .the-process-text-arrow-wrapper-2 {
+        background: #e2d0d3;
+      }
+
+      .the-process-text-arrow-wrapper-3 {
+        background: #dbd2d1;
+      }
+
+      .the-process-text {
+        margin: 0 5px;
+      }
+
+      .the-process-arrow {
+        width: 32px;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+        margin-left: 100%;
+        position: absolute;
+        right: -31px;
+      }
+
+      .work-with-me-header-work-with {
+        color: #e8c9cf;
+        font-size: 41px;
+        font-weight: 600;
+        font-family: sans-serif;
+        letter-spacing: 13px;
+        text-shadow: 0 3px 5px rgba(105, 105, 105, 0.2);
+        margin-top: 10px;
+      }
+
+      .work-with-me-header-me {
+        color: white;
+        font-size: 109px;
+        font-family: "Baskervville", serif;
+        font-weight: 500;
+        font-style: normal;
+        text-shadow: 0 3px 12px rgba(105, 105, 105, 0.25);
+        margin-top: -16px;
+        margin-bottom: -52px;
+      }
+
+      .work-with-me-top-text {
+        margin: 74px 0 30px;
+        font-size: 20px;
+      }
+
+      .work-with-me-bottom-text {
+        font-size: 22px;
+        position: relative;
+      }
+
+      .work-with-me-contact-photo {
+        width: 190px;
+      }
+
+      .work-with-me-contact-me {
+        position: absolute;
+        top: 34%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#about-me" class="nav-link">ABOUT ME</a>
+      <a href="#my-work" class="nav-link">MY WORK</a>
+      <a href="#photography" class="nav-link">PHOTOGRAPHY</a>
+      <a href="#services-offered" class="nav-link">SERVICES OFFERED</a>
+      <a href="#the-process" class="nav-link">THE PROCESS</a>
+      <a href="#work-with-me" class="nav-link">WORK WITH ME!</a>
+    </nav>
+    <section class="hero">
+
+
+<!--      (most likely use Amazon S3 ! only 22 pence per year for me.) Vimeo Pro, Amazon S3, Microsoft Azure Media Services, Google Cloud Storage, and StreamingVideoProvider-->
+
+
+<!--      https://drive.google.com/file/d/1Cw8HHDkgH1ZRwwfAi1gJjgVNYhF8p38h/view?usp=drive_link-->
+
+<!--      <video controls>-->
+<!--&lt;!&ndash;        <source src="https://drive.google.com/uc?export=download&id=1Kyg0XBDSdVuFOFmrFC0qPEJfLCisLgmW" type='video/mp4'>&ndash;&gt;-->
+<!--        <source src="https://drive.google.com/uc?export=download&id=1Cw8HHDkgH1ZRwwfAi1gJjgVNYhF8p38h" type='video/mp4'>-->
+<!--      </video>-->
+
+
+
+
+<!--      THE BELOW VIDEOS ARE SMALL ENOUGH TO BE PART OF REPO!-->
+<!--      THE LIFEWORKS REPOS ARE PROBABLY A LOT LARGER THAN THIS ONE!-->
+<!--      SO THE WINTER WONDERLAND VIDEO IS ONLY 38 MB SO IT SHOULD BE FINE-->
+
+<!--      THE BELOW VIDEOS ARE SMALL ENOUGH TO BE PART OF REPO!-->
+<!--      THE LIFEWORKS REPOS ARE PROBABLY A LOT LARGER THAN THIS ONE!-->
+<!--      SO THE WINTER WONDERLAND VIDEO IS ONLY 38 MB SO IT SHOULD BE FINE-->
+
+
+<!--      "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended. Smaller repositories are faster to clone and easier to work with and maintain"-->
+<!--      https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github-->
+
+
+      <div class="hero-text-links">
+        <div class="hero-text-wrapper">
+          <img
+            class="hero-text"
+            src="hero.png"
+            alt="Naomi UGC Portfolio"
+          >
+        </div>
+        <div class="hero-links">
+          <div class="hero-link">
+            <img
+              src="instagram-button.png"
+              alt="Instagram link"
+            >
+          </div>
+          <div class="hero-link">
+            <img
+              src="facebook-button.png"
+              alt="Facebook link"
+            >
+          </div>
+          <div class="hero-link">
+            <img
+              src="tiktok-button.png"
+              alt="TikTok link"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img
+          class="hero-image"
+          src="img1.png"
+          alt="Photo of Naomi"
+        >
+      </div>
+    </section>
+    <section id="about-me" class="shared-skeleton section-padding">
+      <div class="shared-skeleton-header">
+        <div class="about-me-header">
+          <div class="shared-header about-me-header-hello">Hello!</div>
+          <div class="about-me-header-im-naomi">I’m Naomi</div>
+        </div>
+      </div>
+      <div class="shared-skeleton-body">
+        <div class="shared-skeleton-photo-wrapper">
+          <img
+            src="hello.png"
+            class="shared-skeleton-photo"
+          />
+        </div>
+        <div class="shared-skeleton-content">
+          <div class="about-me-main-text-hi">
+            Hi! I’m Naomi, a UGC creator with a passion for crafting engaging content across diverse niches, including
+            beauty, skincare, and tech—while continuously exploring new industries. Creating UGC allows me to blend
+            creativity with authenticity, bringing brands to life through compelling storytelling and genuine
+            representation.
+          </div>
+          <div class="about-me-main-text-age">
+            Age: 26
+            <br>
+            Height: 5'4
+            <br>
+            Weight: 61kg
+            <br>
+            Based in the UK
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="my-work" class="section-padding">
+      <div class="shared-header">MY WORK</div>
+      <div class="my-work-body">
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork1.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            SKINCARE
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork2.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            SKINCARE
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork3.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            SKINCARE
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork4.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            SKINCARE
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork5.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            LIFESTYLE
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork6.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            TECH
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork7.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            BEAUTY
+          </div>
+        </div>
+        <div class="phone-video-category-wrapper">
+          <div class="phone-video-wrapper">
+            <img
+              class="phone-frame"
+              src="phone.png"
+              alt="phone-frame"
+            >
+            <div class="in-phone-video-wrapper">
+              <video class="in-phone-video" src="mywork/mywork8.mp4" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="my-work-item-category">
+            SKINCARE
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="photography" class="section-padding">
+      <div class="shared-header">PHOTOGRAPHY</div>
+
+
+      <div class="scroll-container">
+        <div class="photography-body-3">
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/1.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/2.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/3.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/4.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/5.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/1.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/2.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/3.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/4.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/5.png"/>
+          </div>
+        </div>
+        <div class="photography-body-2">
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/1.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/2.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/3.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/4.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/5.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/1.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/2.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/3.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/4.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/5.png"/>
+          </div>
+        </div>
+        <div class="photography-body-1">
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/1.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/2.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/3.png"/>
+          </div>
+          <div class="photography-item-wrapper photography-item-top-margin">
+            <img class="photography-item" src="photography/4.png"/>
+          </div>
+          <div class="photography-item-wrapper">
+            <img class="photography-item" src="photography/5.png"/>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+    <section id="services-offered" class="shared-skeleton section-padding">
+      <div class="shared-skeleton-header">
+        <div class="shared-header">SERVICES OFFERED</div>
+        <div class="shared-skeleton-body">
+          <div class="shared-skeleton-content">
+            <div class="services-offered-texts-wrapper">
+              <div class="services-offered-text services-offered-text-1">
+                Short-form videos (TikTok, Reels)
+              </div>
+              <div class="services-offered-text services-offered-text-2">
+                Product/Lifestyle photography
+              </div>
+              <div class="services-offered-text services-offered-text-3">
+                Unboxing & product demos
+              </div>
+              <div class="services-offered-text services-offered-text-4">
+                Reviews/testimonials
+              </div>
+            </div>
+          </div>
+          <div class="shared-skeleton-photo-wrapper">
+            <img
+              src="laptop.png"
+              class="shared-skeleton-photo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="the-process" class="shared-skeleton section-padding">
+      <div class="shared-skeleton-header">
+        <div class="shared-header">THE PROCESS</div>
+      </div>
+      <div class="shared-skeleton-body">
+        <div class="shared-skeleton-photo-wrapper">
+          <img
+            src="serum.png"
+            class="shared-skeleton-photo"
+          />
+        </div>
+        <div class="shared-skeleton-content">
+
+
+
+          <div class="the-process-texts-arrows-wrapper">
+            <div class="the-process-text-arrow-wrapper the-process-text-arrow-wrapper-1">
+              <div class="the-process-text">
+                Connect & Plan
+                <br>
+                Reach out with your project details. We’ll discuss your brand vision, content needs, and goals to ensure the
+                perfect fit.
+              </div>
+              <img src="process1.png" class="the-process-arrow" alt="Connect & Plan" />
+            </div>
+            <div class="the-process-text-arrow-wrapper the-process-text-arrow-wrapper-2">
+              <div class="the-process-text">
+                Create & Review
+                <br>
+                I’ll produce high-quality UGC content based on our plan. You’ll receive drafts for review and provide any
+                feedback.
+              </div>
+              <img src="process2.png" class="the-process-arrow" alt="Create & Review" />
+            </div>
+            <div class="the-process-text-arrow-wrapper the-process-text-arrow-wrapper-3">
+              <div class="the-process-text">
+                Final Delivery & Launch
+                <br>
+                Once approved, I’ll send the final files, ready for posting!
+              </div>
+              <img src="process3.png" class="the-process-arrow" alt="Final Delivery & Launch" />
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+    <section id="work-with-me" class="shared-skeleton section-padding">
+      <div class="shared-skeleton-header">
+        <div class="work-with-me-header-work-with">WORK WITH</div>
+        <div class="work-with-me-header-me">ME!</div>
+      </div>
+      <div class="shared-skeleton-body">
+        <div class="shared-skeleton-photo-wrapper">
+          <img
+            src="footer.png"
+            class="shared-skeleton-photo"
+          />
+        </div>
+        <div class="shared-skeleton-content">
+          <div class="work-with-me-top-text">
+            Thank you for exploring my UGC creator portfolio! I look forward to bringing your vision to life—let’s
+            create something amazing together!
+          </div>
+          <div class="work-with-me-bottom-text">
+            <img
+              class="work-with-me-contact-photo"
+              src="contact.png"
+            />
+            <div class="work-with-me-contact-me">Contact me</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      function highlightNav() {
+        let scrollY = window.scrollY;
+
+        sections.forEach((section, index) => {
+          const offsetTop = section.offsetTop - 100;
+          const offsetBottom = offsetTop + section.clientHeight;
+
+          if (scrollY >= offsetTop && scrollY < offsetBottom) {
+            navLinks.forEach(link => link.classList.remove("active"));
+            navLinks[index - 1].classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", highlightNav);
+
+      highlightNav();
+    </script>
+  </body>
+</html>
