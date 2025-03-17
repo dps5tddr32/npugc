@@ -346,9 +346,31 @@
       .my-work-body {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 50px;
+        /*margin: 0 50px;*/
+        margin: 0 auto;
         justify-content: space-between;
-        gap: 70px 50px;
+        /*gap: 70px 50px;*/
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          max-width: 345px;
+          gap: 35px 5px;
+          padding: 0 10px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          max-width: 625px;
+          gap: 50px 4px;
+          padding: 0 10px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          max-width: 780px;
+          gap: 70px 54px;
+          padding: 0 20px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
 
