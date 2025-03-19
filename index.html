@@ -142,11 +142,36 @@
         width: 100%;
       }
 
+
+
+      section {
+        overflow: hidden;
+      }
+
+
+
+
+
+
+
       .hero {
         display: flex;
         overflow: hidden;
         align-items: center;
-        max-height: 95vh;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          flex-direction: column;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          flex-direction: row;
+          max-height: 95vh;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .hero-text-links {
@@ -156,7 +181,7 @@
         justify-content: center;
         flex-direction: column;
         max-width: 650px;
-        margin: 0 auto;
+        margin: 20px auto;
       }
 
       .hero-text-wrapper {
@@ -167,14 +192,37 @@
       }
 
       .hero-text {
-        width: 75%;
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          width: 85%;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 75%;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .hero-links {
         display: flex;
-        width: 32%;
         flex: 1;
         justify-content: space-between;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          width: 37%;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 32%;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .hero-link {
@@ -187,12 +235,35 @@
       }
 
       .hero-image-wrapper {
-        width: 40%;
+        overflow: hidden;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 40%;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .hero-image {
         width: 100%;
         display: block;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          margin-top: -30px;
+          margin-bottom: -60px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {}
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .section-padding {
@@ -213,23 +284,36 @@
       }
 
       .shared-skeleton {
-        border: 1px solid red;
+        /*border: 1px solid red;*/
         margin: 0 30px 30px;
       }
 
       .shared-skeleton-header {
-        border: 1px solid blue;
+        /*border: 1px solid blue;*/
       }
 
       .shared-skeleton-body {
-        border: 1px solid green;
+        /*border: 1px solid green;*/
         display: flex;
         justify-content: space-between;
         gap: 30px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          flex-direction: column-reverse;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          flex-direction: row;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .shared-skeleton-photo-wrapper {
-        border: 1px solid purple;
+        /*border: 1px solid purple;*/
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {}
         /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -238,7 +322,10 @@
           width: 260px;
         }
         /* Medium devices (landscape tablets, 768px and up) */
-        @media (min-width: 768px) {}
+        @media (min-width: 768px) {
+          min-width: 320px;
+          width: 320px;
+        }
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
@@ -249,7 +336,7 @@
       }
 
       .shared-skeleton-content {
-        border: 1px solid pink;
+        /*border: 1px solid pink;*/
         flex: 1;
       }
 
@@ -261,7 +348,9 @@
         margin-bottom: 0 !important;
 
         /* Extra small devices (phones, 600px and down) */
-        @media (max-width: 600px) {}
+        @media (max-width: 600px) {
+          font-size: 55px !important;
+        }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
           font-size: 55px !important;
@@ -271,7 +360,7 @@
           font-size: 70px !important;
         }
         @media (min-width: 1030px) {
-          font-size: 90px !important;
+          /*font-size: 90px !important;*/
         }
         @media (min-width: 1150px) {}
       }
@@ -284,7 +373,12 @@
         position: absolute;
 
         /* Extra small devices (phones, 600px and down) */
-        @media (max-width: 600px) {}
+        @media (max-width: 600px) {
+          top: 0;
+          left: 51%;
+          transform: translate(12%, 57%);
+          font-size: 51px;
+        }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
           top: 0;
@@ -300,22 +394,47 @@
           font-size: 63px;
         }
         @media (min-width: 1030px) {
-          top: 0;
-          left: 52%;
-          transform: translate(10%, 62%);
-          font-size: 80px;
+          /*top: 0;*/
+          /*left: 52%;*/
+          /*transform: translate(10%, 62%);*/
+          /*font-size: 80px;*/
         }
         @media (min-width: 1150px) {}
       }
 
       .about-me-main-text-hi {
         margin-top: 40px;
-        font-size: 15px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 15px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 20px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .about-me-main-text-age {
         margin-top: 30px;
-        font-size: 14px;
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 14px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 19px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .shared-header {
@@ -326,7 +445,9 @@
         margin-bottom: 15px;
 
         /* Extra small devices (phones, 600px and down) */
-        @media (max-width: 600px) {}
+        @media (max-width: 600px) {
+          font-size: 40px;
+        }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
           font-size: 40px;
@@ -336,12 +457,10 @@
           font-size: 55px;
         }
         @media (min-width: 1030px) {
-          font-size: 70px;
+          /*font-size: 70px;*/
         }
         @media (min-width: 1150px) {}
       }
-
-
 
       .my-work-body {
         display: flex;
@@ -350,6 +469,7 @@
         margin: 0 auto;
         justify-content: space-between;
         /*gap: 70px 50px;*/
+        margin-bottom: 40px;
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
@@ -373,11 +493,6 @@
         @media (min-width: 1150px) {}
       }
 
-
-
-
-
-
       .my-work-item-category {
         font-size: 26px;
         font-family: "Open Sans", serif;
@@ -395,20 +510,43 @@
 
 
 
+
+
+
+
       .scroll-container {
         /*position: absolute;*/
         position: relative;
-        width: 100vw;
         /*height: 100vh;*/
         /*height: 350px;*/
-        height: calc(29vw + 113px);
         white-space: nowrap;
         overflow: hidden;
+        /*width: 1000px;*/
+
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          width: 768px;
+          height: 340px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 768px;
+          height: 340px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          width: 100vw;
+          height: calc(29vw + 113px);
+        }
+        /*SPECIAL BREAKPOINT*/
+        @media (min-width: 870px) {
+          height: 370px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
-
-
-
-
 
 
       .photography-body-3 {
@@ -431,11 +569,13 @@
 
         display: flex;
         width: 218%;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
+        justify-content: space-around;
+        /*justify-content: space-evenly;*/
         position: absolute;
         /*height: 100%;*/
         animation: scroll2 64s linear infinite;
-        border: 1px solid green;
+        /*border: 1px solid green;*/
         animation-delay: 32s;
         /*left: -218%;*/
         /*left: -218%;*/
@@ -474,8 +614,6 @@
       }
 
 
-
-
       .photography-body-2 {
         top: 0;
         bottom: 0;
@@ -500,11 +638,13 @@
 
         display: flex;
         width: 218%;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
+        justify-content: space-around;
+        /*justify-content: space-evenly;*/
         position: absolute;
         /*height: 100%;*/
         animation: scroll2 64s linear infinite;
-        border: 1px solid blue;
+        /*border: 1px solid blue;*/
         /*left: -218%;*/
         /*left: -218%;*/
         /*left: 100%;*/
@@ -544,8 +684,6 @@
       }
 
 
-
-
       .photography-body-1 {
         top: 0;
         bottom: 0;
@@ -571,11 +709,13 @@
 
         display: flex;
         width: 109%;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
+        justify-content: space-around;
+        /*justify-content: space-evenly;*/
         position: absolute;
         /*height: 100%;*/
         animation: scroll1 16s linear;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
         /*left: 0;*/
         /*left: -109%;*/
         left: 109%;
@@ -614,29 +754,56 @@
       }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       .photography-item-wrapper {
         /*flex: 1;*/
         min-width: 0;
         margin: 5px;
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 180px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
+
+
+      /*.photography-item-wrapper-1 {*/
+
+      /*  !* Extra small devices (phones, 600px and down) *!*/
+      /*  @media (max-width: 600px) {}*/
+      /*  !* Small devices (portrait tablets and large phones, 600px and up) *!*/
+      /*  @media (min-width: 600px) {*/
+      /*    margin-left: 20px;*/
+      /*  }*/
+      /*  !* Medium devices (landscape tablets, 768px and up) *!*/
+      /*  @media (min-width: 768px) {}*/
+      /*  @media (min-width: 1030px) {}*/
+      /*  @media (min-width: 1150px) {}*/
+      /*}*/
+
+      /*.photography-item-wrapper-2 {*/
+
+      /*  !* Extra small devices (phones, 600px and down) *!*/
+      /*  @media (max-width: 600px) {}*/
+      /*  !* Small devices (portrait tablets and large phones, 600px and up) *!*/
+      /*  @media (min-width: 600px) {*/
+      /*    margin-right: 20px;*/
+      /*  }*/
+      /*  !* Medium devices (landscape tablets, 768px and up) *!*/
+      /*  @media (min-width: 768px) {}*/
+      /*  @media (min-width: 1030px) {}*/
+      /*  @media (min-width: 1150px) {}*/
+      /*}*/
+
+
+
+
 
       .photography-item-top-margin {
         margin-top: 100px;
@@ -691,13 +858,48 @@
       }
 
       .the-process-texts-arrows-wrapper {
-        font-size: 14px;
         font-weight: 600;
         font-style: normal;
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: space-evenly;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 12px;
+        }
+
+
+        /*SPECIAL BREAKPOINT*/
+        @media (min-width: 650px) {
+          font-size: 13px;
+        }
+
+
+        /*SPECIAL BREAKPOINT*/
+        @media (min-width: 700px) {
+          font-size: 14px;
+        }
+
+
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 15px;
+        }
+        /*SPECIAL BREAKPOINT*/
+        @media (min-width: 960px) {
+          font-size: 17px;
+        }
+        @media (min-width: 1030px) {
+          font-size: 18px;
+        }
+        @media (min-width: 1150px) {}
       }
 
       .the-process-text-arrow-wrapper {
@@ -751,13 +953,27 @@
 
       .work-with-me-header-me {
         color: white;
-        font-size: 109px;
         font-family: "Baskervville", serif;
         font-weight: 500;
         font-style: normal;
         text-shadow: 0 3px 12px rgba(105, 105, 105, 0.25);
         margin-top: -16px;
         margin-bottom: -52px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          font-size: 103px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 103px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          font-size: 103px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .work-with-me-top-text {
@@ -771,16 +987,75 @@
       }
 
       .work-with-me-contact-photo {
-        width: 190px;
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          width: 190px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 190px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          width: 230px;
+          margin-left: -25px;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .work-with-me-contact-me {
-        position: absolute;
-        top: 34%;
-        left: 52%;
-        transform: translate(-50%, -50%);
-        width: 100%;
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          position: absolute;
+          top: 34%;
+          left: 52%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          position: absolute;
+          top: 34%;
+          left: 52%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 34%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
+
+
+
+
+      .no-bottom-margin {
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          margin-bottom: 0 !important;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
+
+      }
+
+      .normal-flex-column {
+        flex-direction: column !important;
+      }
+
+
+
     </style>
   </head>
   <body>
@@ -1084,12 +1359,12 @@
           <div class="photography-item-wrapper">
             <img class="photography-item" src="photography/4.png"/>
           </div>
-          <div class="photography-item-wrapper photography-item-top-margin">
+          <div class="photography-item-wrapper  photography-item-wrapper-2 photography-item-top-margin">
             <img class="photography-item" src="photography/5.png"/>
           </div>
         </div>
         <div class="photography-body-1">
-          <div class="photography-item-wrapper">
+          <div class="photography-item-wrapper photography-item-wrapper-1">
             <img class="photography-item" src="photography/1.png"/>
           </div>
           <div class="photography-item-wrapper photography-item-top-margin">
@@ -1114,8 +1389,8 @@
 
     <section id="services-offered" class="shared-skeleton section-padding">
       <div class="shared-skeleton-header">
-        <div class="shared-header">SERVICES OFFERED</div>
-        <div class="shared-skeleton-body">
+        <div class="shared-header no-bottom-margin">SERVICES OFFERED</div>
+        <div class="shared-skeleton-body normal-flex-column">
           <div class="shared-skeleton-content">
             <div class="services-offered-texts-wrapper">
               <div class="services-offered-text services-offered-text-1">
