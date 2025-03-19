@@ -36,6 +36,7 @@
         margin-bottom: 13px;
         position: relative;
         z-index: 1;
+        pointer-events: none;
       }
       .in-phone-video-wrapper {
         border-radius: 14px;
@@ -53,6 +54,7 @@
         height: 100%;
         transform: translateX(-50%);
         position: relative;
+        cursor: pointer;
       }
 
 
@@ -1513,6 +1515,32 @@
       window.addEventListener("scroll", highlightNav);
 
       highlightNav();
+    </script>
+
+    <script>
+      document.querySelectorAll('.in-phone-video').forEach(video => {
+        video.addEventListener('click', () => {
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+          video.muted = false; // Unmute when fullscreen
+          video.play();
+        });
+      });
+
+      document.addEventListener("fullscreenchange", () => {
+        document.querySelectorAll('.in-phone-video').forEach(video => {
+          if (!document.fullscreenElement) {
+            video.muted = true; // Mute when exiting fullscreen
+          }
+        });
+      });
     </script>
   </body>
 </html>
