@@ -1179,7 +1179,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork1.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork1.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1194,7 +1194,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork2.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork2.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1209,7 +1209,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork3.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork3.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1224,7 +1224,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork4.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork4.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1239,7 +1239,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork5.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork5.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1254,7 +1254,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork6.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork6.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1269,7 +1269,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork7.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork7.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1284,7 +1284,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork8.mp4" autoplay loop muted playsinline controls></video>
+              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork8.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1517,9 +1517,43 @@
       highlightNav();
     </script>
 
+<!--    <script>-->
+<!--      document.querySelectorAll('.in-phone-video').forEach(video => {-->
+<!--        video.addEventListener('click', () => {-->
+<!--          if (video.requestFullscreen) {-->
+<!--            video.requestFullscreen();-->
+<!--          } else if (video.mozRequestFullScreen) {-->
+<!--            video.mozRequestFullScreen();-->
+<!--          } else if (video.webkitRequestFullscreen) {-->
+<!--            video.webkitRequestFullscreen();-->
+<!--          } else if (video.msRequestFullscreen) {-->
+<!--            video.msRequestFullscreen();-->
+<!--          }-->
+<!--          video.muted = false; // Unmute when fullscreen-->
+<!--          video.play();-->
+<!--        });-->
+<!--      });-->
+
+<!--      document.addEventListener("fullscreenchange", () => {-->
+<!--        document.querySelectorAll('.in-phone-video').forEach(video => {-->
+<!--          if (!document.fullscreenElement) {-->
+<!--            video.muted = true; // Mute when exiting fullscreen-->
+<!--          }-->
+<!--        });-->
+<!--      });-->
+<!--    </script>-->
+
+
+
     <script>
       document.querySelectorAll('.in-phone-video').forEach(video => {
         video.addEventListener('click', () => {
+          video.currentTime = 0; // Restart video from beginning
+          video.muted = false; // Unmute when fullscreen
+          video.setAttribute('controls', 'true'); // Show controls in fullscreen
+          video.play(); // Play video
+
+          // Enter fullscreen mode
           if (video.requestFullscreen) {
             video.requestFullscreen();
           } else if (video.mozRequestFullScreen) {
@@ -1529,18 +1563,27 @@
           } else if (video.msRequestFullscreen) {
             video.msRequestFullscreen();
           }
-          video.muted = false; // Unmute when fullscreen
-          video.play();
+
+          // Ensure the video plays after entering fullscreen
+          setTimeout(() => {
+            video.play();
+          }, 100);
         });
       });
 
+      // Detect exiting fullscreen and mute again
       document.addEventListener("fullscreenchange", () => {
         document.querySelectorAll('.in-phone-video').forEach(video => {
           if (!document.fullscreenElement) {
             video.muted = true; // Mute when exiting fullscreen
+            video.removeAttribute('controls'); // Remove controls when not fullscreen
           }
         });
       });
     </script>
+
+
+
+
   </body>
 </html>
