@@ -1,4 +1,66 @@
 <!DOCTYPE html>
+
+<!--things left to do:-->
+
+<!--fix videos not fullscreening on-click on iphone safari-->
+
+<!--make sure videos (on all devices):-->
+<!-- - no controls when not full-screen,-->
+<!-- - when clicked they get full-screened and play from the beginning and unmute,-->
+<!-- - when full screen they can be rewinded back and forth,-->
+<!-- - when minimised they get muted,-->
+
+<!--top 3 social media links not clickable-->
+
+<!--bottom email contact me button not clickable-->
+
+<!--make sure bottom email contact me button text not selectable-->
+
+<!--make sure social and contact me links have cursor pointer on desktop-->
+
+<!--"I'm Naomi" next to "hello" alighed on all breakpoints-->
+
+<!--shared header size correct on all breakpoints-->
+
+<!--mobile menu top right button to open/hide it-->
+
+<!--mobile menu clicking moves to correct section-->
+
+<!--mobile menu selected section closes the menu-->
+
+<!--"The Process" bullet points font size good on all breakpoints-->
+<!-- - probably make the right-arrow photos taller on mobile so more space for text,-->
+
+<!--"Work with ME!" header size correct on all breakpoints-->
+
+<!--"Hi! I’m Naomi, a UGC..." font size correct on all breakpoints-->
+
+<!--"Thank you for exploring..." font size correct on all breakpoints-->
+
+<!--maybe set max-width on shared skeleton for desktop so not to edges-->
+
+<!--...-->
+
+<!--final comparison with canva to make aligned as much as possible-->
+
+<!--tested that it all works no my samsung firefox focus post-deployment-->
+
+<!--tested that it all works no Nae's iphone safari post-deployment-->
+
+<!--buy naomip-ugc.com on Nae's namecheap account-->
+
+<!--connect naomip-ugc.com to the github pages deployment-->
+
+<!--make sure the last "work with me" page nav item focuses properly on all devices:-->
+<!-- - don't change anything cos everything works perfectly on other sections, and only make-->
+<!--it focus on the last item in the nav when the website is scrolled to the very bottom last pixel-->
+
+<!--make sure the video part is not laggy when scrolling on samsung firefox focus-->
+
+<!--make sure it looks good on the 4k 27-inch monitor too-->
+
+<!--add overlay gifs over videos cos they don't load on slow mobile data-->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -92,15 +154,23 @@
         justify-content: space-between;
         align-items: center;
         top: 0;
-        z-index: 2;
+        z-index: 3;
+        display: flex;
+        transition: top 0.3s ease-in-out;
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
-          display: none;
+          width: 100%;
+          top: -250px;
+          flex-direction: column;
+          gap: 12px;
+          height: auto;
+          /* top: unset; */
+          padding: 11px 0;
+          font-size: 18px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
-          display: flex;
           width: calc(100% - 2vw);
           font-size: 2vw;
           padding: 1vw;
@@ -117,6 +187,15 @@
           padding: 10px 60px;
         }
       }
+
+
+      nav.show {
+        top: 0;
+      }
+
+
+
+
 
       .nav-link {
         text-decoration: none;
@@ -164,6 +243,7 @@
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           flex-direction: column;
+          padding-top: 10px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -175,6 +255,53 @@
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
+
+
+
+
+
+
+
+
+
+
+      .burger {
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          top: -6px;
+          right: -3px;
+          width: 40px;
+          position: fixed;
+          /* z-index: 1000; */
+          z-index: 2;
+          padding: 10px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          display: none;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       .hero-text-links {
         flex: 1;
@@ -230,6 +357,7 @@
       .hero-link {
         flex: 1;
         margin: 10% 3% 0;
+        cursor: pointer;
       }
 
       .hero-link img {
@@ -285,10 +413,41 @@
         @media (min-width: 1150px) {}
       }
 
+
+
+
+
+
+
+
+
       .shared-skeleton {
         /*border: 1px solid red;*/
-        margin: 0 30px 30px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          margin: 0 5px 20px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          margin: 0 30px 30px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
+
+
+
+
+
+
+
+
+
+
+
 
       .shared-skeleton-header {
         /*border: 1px solid blue;*/
@@ -298,15 +457,16 @@
         /*border: 1px solid green;*/
         display: flex;
         justify-content: space-between;
-        gap: 30px;
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           flex-direction: column-reverse;
+          gap: 20px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
           flex-direction: row;
+          gap: 30px;
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width: 768px) {}
@@ -333,8 +493,21 @@
       }
 
       .shared-skeleton-photo {
-        width: 100%;
         display: block;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          width: 80%;
+          margin: 0 auto;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          width: 100%;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .shared-skeleton-content {
@@ -351,7 +524,7 @@
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
-          font-size: 55px !important;
+          font-size: 45px !important;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -373,13 +546,14 @@
         font-weight: 300;
         font-style: italic;
         position: absolute;
+        white-space: nowrap;
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
-          top: 0;
-          left: 51%;
+          top: 11px;
+          left: 53%;
           transform: translate(12%, 57%);
-          font-size: 51px;
+          font-size: 37px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -448,7 +622,7 @@
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
-          font-size: 40px;
+          font-size: 35px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -496,12 +670,28 @@
       }
 
       .my-work-item-category {
-        font-size: 26px;
         font-family: "Open Sans", serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          font-size: 20px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 26px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {
+        }
+        @media (min-width: 1030px) {
+          /*font-size: 70px;*/
+        }
+        @media (min-width: 1150px) {}
       }
 
 
@@ -826,17 +1016,43 @@
 
 
       .services-offered-texts-wrapper {
-        font-size: 20px;
         font-weight: 600;
         font-style: normal;
         color: white;
         display: flex;
         flex-direction: column;
-        gap: 5px;
         height: 100%;
         justify-content: center;
-        margin: 0 35px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          margin: 0 5px;
+          font-size: 17px;
+          gap: 8px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          margin: 0 35px;
+          font-size: 20px;
+          gap: 5px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
+
+
+
+
+
+
+
+
+
+
+
+
 
       .services-offered-text {
         border-radius: 100px;
@@ -870,6 +1086,7 @@
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           font-size: 14px;
+          gap: 10px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -945,12 +1162,24 @@
 
       .work-with-me-header-work-with {
         color: #e8c9cf;
-        font-size: 41px;
         font-weight: 600;
         font-family: sans-serif;
         letter-spacing: 13px;
         text-shadow: 0 3px 5px rgba(105, 105, 105, 0.2);
         margin-top: 10px;
+
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          font-size: 30px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          font-size: 41px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
 
       .work-with-me-header-me {
@@ -964,7 +1193,7 @@
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
-          font-size: 103px;
+          font-size: 83px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -989,6 +1218,8 @@
       }
 
       .work-with-me-contact-photo {
+        cursor: pointer;
+
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           width: 190px;
@@ -1007,13 +1238,24 @@
       }
 
       .work-with-me-contact-me {
+        cursor: pointer;
+
+        pointer-events: none;
+
+        /*-webkit-touch-callout: none;*/
+        /*-webkit-user-select: none;*/
+        /*-khtml-user-select: none;*/
+        /*-moz-user-select: none;*/
+        /*-ms-user-select: none;*/
+        /*user-select: none;*/
+
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           position: absolute;
           top: 34%;
           left: 52%;
           transform: translate(-50%, -50%);
-          width: 100%;
+          /*width: 100%;*/
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -1021,7 +1263,7 @@
           top: 34%;
           left: 52%;
           transform: translate(-50%, -50%);
-          width: 100%;
+          /*width: 100%;*/
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width: 768px) {
@@ -1029,7 +1271,7 @@
           top: 34%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 100%;
+          /*width: 100%;*/
         }
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
@@ -1053,10 +1295,19 @@
       }
 
       .normal-flex-column {
-        flex-direction: column !important;
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+          flex-direction: column !important;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media (min-width: 600px) {
+          flex-direction: row;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media (min-width: 768px) {}
+        @media (min-width: 1030px) {}
+        @media (min-width: 1150px) {}
       }
-
-
 
     </style>
   </head>
@@ -1097,6 +1348,7 @@
 <!--      "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended. Smaller repositories are faster to clone and easier to work with and maintain"-->
 <!--      https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github-->
 
+      <img src="burger.png" class="burger" />
 
       <div class="hero-text-links">
         <div class="hero-text-wrapper">
@@ -1111,18 +1363,21 @@
             <img
               src="instagram-button.png"
               alt="Instagram link"
+              onclick="window.open('https://www.instagram.com/naomi.pedro_', '_blank')"
             >
           </div>
           <div class="hero-link">
             <img
               src="facebook-button.png"
               alt="Facebook link"
+              onclick="window.open('https://www.facebook.com/naomi.pedro.39', '_blank')"
             >
           </div>
           <div class="hero-link">
             <img
               src="tiktok-button.png"
               alt="TikTok link"
+              onclick="window.open('https://www.tiktok.com/@naomip.ugc', '_blank')"
             >
           </div>
         </div>
@@ -1488,6 +1743,8 @@
             <img
               class="work-with-me-contact-photo"
               src="contact.png"
+              alt="Contact"
+              onclick="window.location.href='mailto:naomicollabspace@gmail.com'"
             />
             <div class="work-with-me-contact-me">Contact me</div>
           </div>
@@ -1582,6 +1839,28 @@
       });
     </script>
 
+
+    <script>
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('nav');
+      const navItems = document.querySelectorAll('.nav-link');
+
+      burger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+      });
+
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          nav.classList.remove('show');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!nav.contains(event.target) && !burger.contains(event.target)) {
+          nav.classList.remove('show');
+        }
+      });
+    </script>
 
 
 
