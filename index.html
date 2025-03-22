@@ -276,7 +276,7 @@
           position: fixed;
           /* z-index: 1000; */
           z-index: 2;
-          padding: 10px;
+          padding: 20px 18px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -370,7 +370,9 @@
         overflow: hidden;
 
         /* Extra small devices (phones, 600px and down) */
-        @media (max-width: 600px) {}
+        @media (max-width: 600px) {
+          width: 100%;
+        }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
           width: 40%;
@@ -1436,7 +1438,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork1thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo1" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork1thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1451,7 +1453,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork2thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo2" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork2thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1466,7 +1468,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork3thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo3" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork3thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1481,7 +1483,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork4thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo4" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork4thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1496,7 +1498,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork5thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo5" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork5thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1511,7 +1513,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork6thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo6" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork6thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1526,7 +1528,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork7thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo7" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork7thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1541,7 +1543,7 @@
               alt="phone-frame"
             >
             <div class="in-phone-video-wrapper">
-              <video class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork8thumbnail.mp4" autoplay loop muted playsinline></video>
+              <video id="lowResVideo8" class="in-phone-video" src="https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/thumbnails/Mywork8thumbnail.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
           <div class="my-work-item-category">
@@ -1753,6 +1755,15 @@
         </div>
       </div>
     </section>
+
+
+
+
+
+
+
+
+
     <script>
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll(".nav-link");
@@ -1805,44 +1816,6 @@
 
 
     <script>
-      document.querySelectorAll('.in-phone-video').forEach(video => {
-        video.addEventListener('click', () => {
-          video.currentTime = 0; // Restart video from beginning
-          video.muted = false; // Unmute when fullscreen
-          video.setAttribute('controls', 'true'); // Show controls in fullscreen
-          video.play(); // Play video
-
-          // Enter fullscreen mode
-          if (video.requestFullscreen) {
-            video.requestFullscreen();
-          } else if (video.mozRequestFullScreen) {
-            video.mozRequestFullScreen();
-          } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-          } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-          }
-
-          // Ensure the video plays after entering fullscreen
-          setTimeout(() => {
-            video.play();
-          }, 100);
-        });
-      });
-
-      // Detect exiting fullscreen and mute again
-      document.addEventListener("fullscreenchange", () => {
-        document.querySelectorAll('.in-phone-video').forEach(video => {
-          if (!document.fullscreenElement) {
-            video.muted = true; // Mute when exiting fullscreen
-            video.removeAttribute('controls'); // Remove controls when not fullscreen
-          }
-        });
-      });
-    </script>
-
-
-    <script>
       const burger = document.querySelector('.burger');
       const nav = document.querySelector('nav');
       const navItems = document.querySelectorAll('.nav-link');
@@ -1864,6 +1837,173 @@
       });
     </script>
 
+
+
+
+
+
+
+
+<!--    <script>-->
+<!--      document.querySelectorAll('.in-phone-video').forEach(video => {-->
+<!--        video.addEventListener('click', () => {-->
+<!--          video.currentTime = 0; // Restart video from beginning-->
+<!--          video.muted = false; // Unmute when fullscreen-->
+<!--          video.setAttribute('controls', 'true'); // Show controls in fullscreen-->
+<!--          video.play(); // Play video-->
+
+<!--          // Enter fullscreen mode-->
+<!--          if (video.requestFullscreen) {-->
+<!--            video.requestFullscreen();-->
+<!--          } else if (video.mozRequestFullScreen) {-->
+<!--            video.mozRequestFullScreen();-->
+<!--          } else if (video.webkitRequestFullscreen) {-->
+<!--            video.webkitRequestFullscreen();-->
+<!--          } else if (video.msRequestFullscreen) {-->
+<!--            video.msRequestFullscreen();-->
+<!--          }-->
+
+<!--          // Ensure the video plays after entering fullscreen-->
+<!--          setTimeout(() => {-->
+<!--            video.play();-->
+<!--          }, 100);-->
+<!--        });-->
+<!--      });-->
+
+<!--      // Detect exiting fullscreen and mute again-->
+<!--      document.addEventListener("fullscreenchange", () => {-->
+<!--        document.querySelectorAll('.in-phone-video').forEach(video => {-->
+<!--          if (!document.fullscreenElement) {-->
+<!--            video.muted = true; // Mute when exiting fullscreen-->
+<!--            video.removeAttribute('controls'); // Remove controls when not fullscreen-->
+<!--          }-->
+<!--        });-->
+<!--      });-->
+<!--    </script>-->
+
+
+
+
+
+
+
+    <script>
+      document.getElementById("lowResVideo1").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork1.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+    <script>
+      document.getElementById("lowResVideo2").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork2.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo3").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork3.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo4").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork4.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo5").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork5.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo6").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork6.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo7").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork7.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
+
+
+    <script>
+      document.getElementById("lowResVideo8").addEventListener("click", function() {
+        let highResVideo = document.createElement("video");
+        highResVideo.src = "https://github.com/dps5tddr32/npugc/raw/refs/heads/master/mywork/Mywork8.mp4";
+        highResVideo.controls = true;
+        highResVideo.autoplay = true;
+        document.body.appendChild(highResVideo);
+
+        highResVideo.requestFullscreen().catch(err => {
+          console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+      });
+    </script>
 
 
   </body>
