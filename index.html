@@ -1845,30 +1845,30 @@
 
 
 <!--    <script>-->
-<!--      document.querySelectorAll('.in-phone-video').forEach(video => {-->
-<!--        video.addEventListener('click', () => {-->
-<!--          video.currentTime = 0; // Restart video from beginning-->
-<!--          video.muted = false; // Unmute when fullscreen-->
-<!--          video.setAttribute('controls', 'true'); // Show controls in fullscreen-->
-<!--          video.play(); // Play video-->
-
-<!--          // Enter fullscreen mode-->
-<!--          if (video.requestFullscreen) {-->
-<!--            video.requestFullscreen();-->
-<!--          } else if (video.mozRequestFullScreen) {-->
-<!--            video.mozRequestFullScreen();-->
-<!--          } else if (video.webkitRequestFullscreen) {-->
-<!--            video.webkitRequestFullscreen();-->
-<!--          } else if (video.msRequestFullscreen) {-->
-<!--            video.msRequestFullscreen();-->
-<!--          }-->
-
-<!--          // Ensure the video plays after entering fullscreen-->
-<!--          setTimeout(() => {-->
-<!--            video.play();-->
-<!--          }, 100);-->
-<!--        });-->
-<!--      });-->
+<!--      // document.querySelectorAll('.in-phone-video').forEach(video => {-->
+<!--      //   video.addEventListener('click', () => {-->
+<!--      //     video.currentTime = 0; // Restart video from beginning-->
+<!--      //     video.muted = false; // Unmute when fullscreen-->
+<!--      //     video.setAttribute('controls', 'true'); // Show controls in fullscreen-->
+<!--      //     video.play(); // Play video-->
+<!--      //-->
+<!--      //     // Enter fullscreen mode-->
+<!--      //     if (video.requestFullscreen) {-->
+<!--      //       video.requestFullscreen();-->
+<!--      //     } else if (video.mozRequestFullScreen) {-->
+<!--      //       video.mozRequestFullScreen();-->
+<!--      //     } else if (video.webkitRequestFullscreen) {-->
+<!--      //       video.webkitRequestFullscreen();-->
+<!--      //     } else if (video.msRequestFullscreen) {-->
+<!--      //       video.msRequestFullscreen();-->
+<!--      //     }-->
+<!--      //-->
+<!--      //     // Ensure the video plays after entering fullscreen-->
+<!--      //     setTimeout(() => {-->
+<!--      //       video.play();-->
+<!--      //     }, 100);-->
+<!--      //   });-->
+<!--      // });-->
 
 <!--      // Detect exiting fullscreen and mute again-->
 <!--      document.addEventListener("fullscreenchange", () => {-->
@@ -1898,6 +1898,12 @@
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
         });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
+        });
       });
     </script>
 
@@ -1911,6 +1917,12 @@
 
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
         });
       });
     </script>
@@ -1927,6 +1939,12 @@
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
         });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
+        });
       });
     </script>
 
@@ -1941,6 +1959,12 @@
 
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
         });
       });
     </script>
@@ -1957,6 +1981,12 @@
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
         });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
+        });
       });
     </script>
 
@@ -1971,6 +2001,12 @@
 
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
         });
       });
     </script>
@@ -1987,6 +2023,12 @@
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
         });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
+        });
       });
     </script>
 
@@ -2001,6 +2043,12 @@
 
         highResVideo.requestFullscreen().catch(err => {
           console.error("Error attempting to enable full-screen mode:", err.message);
+        });
+
+        document.addEventListener("fullscreenchange", function() {
+          if (!document.fullscreenElement) {
+            highResVideo.remove();
+          }
         });
       });
     </script>
