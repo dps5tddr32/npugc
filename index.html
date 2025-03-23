@@ -1,91 +1,39 @@
 <!DOCTYPE html>
 
-<!--things left to do:-->
+<!--Things to maybe improve in the future if Nae raises these issues, or if-->
+<!--I'll just decide that in the future I have time to work on them:-->
 
 <!--fix videos not fullscreening on-click on iphone safari-->
 
-<!--make sure videos (on all devices):-->
-<!-- - no controls when not full-screen,-->
-<!-- - when clicked they get full-screened and play from the beginning and unmute,-->
-<!-- - when full screen they can be rewinded back and forth,-->
-<!-- - when minimised they get muted,-->
+<!--the links such as the top 3 social media links and the contact me bottom form-->
+<!--are focusable with keyboard / tabbable-->
 
-<!--top 3 social media links not clickable-->
-
-<!--bottom email contact me button not clickable-->
-
-<!--make sure bottom email contact me button text not selectable-->
-
-<!--make sure social and contact me links have cursor pointer on desktop-->
-
-<!--"I'm Naomi" next to "hello" alighed on all breakpoints-->
-
-<!--shared header size correct on all breakpoints-->
-
-<!--mobile menu top right button to open/hide it-->
-
-<!--mobile menu clicking moves to correct section-->
-
-<!--mobile menu selected section closes the menu-->
-
-<!--"The Process" bullet points font size good on all breakpoints-->
+<!--"The Process" bullet points font size not very small on Mobile,-->
 <!-- - probably make the right-arrow photos taller on mobile so more space for text,-->
 
-<!--"Work with ME!" header size correct on all breakpoints-->
-
-<!--"Hi! I’m Naomi, a UGC..." font size correct on all breakpoints-->
-
-<!--"Thank you for exploring..." font size correct on all breakpoints-->
-
+<!--(probably not, cos now it matches the hero full-width so it's good, but maybe)-->
 <!--maybe set max-width on shared skeleton for desktop so not to edges-->
-
-<!--...-->
 
 <!--final comparison with canva to make aligned as much as possible-->
 
-<!--tested that it all works no my samsung firefox focus post-deployment-->
-
 <!--tested that it all works no Nae's iphone safari post-deployment-->
-
-<!--buy naomip-ugc.com on Nae's namecheap account-->
-
-<!--connect naomip-ugc.com to the github pages deployment-->
 
 <!--make sure the last "work with me" page nav item focuses properly on all devices:-->
 <!-- - don't change anything cos everything works perfectly on other sections, and only make-->
 <!--it focus on the last item in the nav when the website is scrolled to the very bottom last pixel-->
 
-<!--make sure the video part is not laggy when scrolling on samsung firefox focus-->
-
-<!--make sure it looks good on the 4k 27-inch monitor too-->
-
-<!--add overlay gifs over videos cos they don't load on slow mobile data-->
-
 <!--if site still slow after gif fix then host the vids on s3-->
+<!--(most likely use Amazon S3 ! only 22 pence per year for me.) Vimeo Pro, Amazon S3, Microsoft Azure Media Services, Google Cloud Storage, and StreamingVideoProvider-->
 
+<!--if mobile screen size load 480p mp4s and if desktop screen-->
+<!--size load separate 1080p mp4 files cos we can assume that-->
+<!--mobile data on phones is slower than PC broadbands-->
 
-
-
-<!--UGCC-->
-<!--[[[-->
-<!--https://dps5tddr32.github.io/npugc/-->
+<!--NOTES TO KEEP IN MIND:-->
 <!--&&-->
 <!--GitHub blocks vids over 100mb, gives warning for files over 50mb, and recommends repos are smaller than 1gb (all of it is listed on this page: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github?platform=mac).-->
-
-<!--UGC site tasks left to do:-->
-
-<!-- - figure out a way using gpd probably two make the site not even start loading the videos all the way until the gif related to what is clicked on so actually it will not be the video loading with the gif over it but there will be no video loading at all and and then separately when full screen only that video will start loading and that is because the whole website is very slow and I suspect it's because all the videos are being loaded at the same time so there will be an artificial relationship between a gif and the video,-->
-<!-- - make the gif be 8 seconds long for each of the videos but not exactly having four pieces of exactly for two seconds each because then while the Old playing they will all cut to the next scene in sync and that's going to look weird so it's more or less more or less for clips of each video more or less between one second and three seconds each long but the whole gift will be eight seconds for all of them and I can see that I can export it as gif using the Vinci resolve in the export section and then maybe I can run at through some compression up that I have on my PC laptop already (and not necessarily only 4 clips per gif. Make it look cool basically.),-->
-<!-- - probably reduce the resolution of the hero section photo because when the site first loads that takes quite a long time to load and the same goes for the Naomi Pedro ugly folio photo text on the hero section,-->
-<!-- - for the GIFs, make them different lengths, so 7 8 9 and 10 seconds so they don't all loop at the same time, and in random order (in left-right-top-bottom order:-->
-<!--7 10 8 9-->
-<!--10 9 7 8),-->
-<!-- - if these GIFs still too heavy then reduce their resolution from 608 x 1080 p cos they can be way way smaller in resolution (can use [ezgif.com/optimize](http://ezgif.com/optimize))-->
-
-
-
-
-
+<!--&&-->
+<!--"for website to be fast, it is recommended that whole website is smaller than 5mb"-->
 
 <html lang="en">
   <head>
@@ -106,11 +54,7 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
     <style>
-
-
       .phone-video-category-wrapper {
-        /*position: relative;*/
-        /*width: 500px; !* Adjust to match your frame *!*/
         height: auto;
         overflow: hidden;
       }
@@ -118,7 +62,6 @@
         position: relative;
       }
       .phone-frame {
-        /* width: 100%; */
         display: block;
         width: 135px;
         margin-bottom: 13px;
@@ -145,16 +88,10 @@
         cursor: pointer;
       }
 
-
-
-
-
-
       body {
         font-family: "Cardo", serif;
         text-align: center;
         background: #f6edec;
-        /*background: darkslategrey;*/
         margin: 0;
 
         /* Extra small devices (phones, 600px and down) */
@@ -191,7 +128,6 @@
           flex-direction: column;
           gap: 12px;
           height: auto;
-          /* top: unset; */
           padding: 11px 0;
           font-size: 18px;
         }
@@ -214,14 +150,9 @@
         }
       }
 
-
       nav.show {
         top: 0;
       }
-
-
-
-
 
       .nav-link {
         text-decoration: none;
@@ -249,17 +180,9 @@
         width: 100%;
       }
 
-
-
       section {
         overflow: hidden;
       }
-
-
-
-
-
-
 
       .hero {
         display: flex;
@@ -282,15 +205,6 @@
         @media (min-width: 1150px) {}
       }
 
-
-
-
-
-
-
-
-
-
       .burger {
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
@@ -298,7 +212,6 @@
           right: -3px;
           width: 40px;
           position: fixed;
-          /* z-index: 1000; */
           z-index: 2;
           padding: 20px 18px;
         }
@@ -311,23 +224,6 @@
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       .hero-text-links {
         flex: 1;
@@ -441,17 +337,7 @@
         @media (min-width: 1150px) {}
       }
 
-
-
-
-
-
-
-
-
       .shared-skeleton {
-        /*border: 1px solid red;*/
-
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           margin: 0 5px 20px;
@@ -466,23 +352,7 @@
         @media (min-width: 1150px) {}
       }
 
-
-
-
-
-
-
-
-
-
-
-
-      .shared-skeleton-header {
-        /*border: 1px solid blue;*/
-      }
-
       .shared-skeleton-body {
-        /*border: 1px solid green;*/
         display: flex;
         justify-content: space-between;
 
@@ -503,7 +373,6 @@
       }
 
       .shared-skeleton-photo-wrapper {
-        /*border: 1px solid purple;*/
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {}
         /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -539,7 +408,6 @@
       }
 
       .shared-skeleton-content {
-        /*border: 1px solid pink;*/
         flex: 1;
       }
 
@@ -562,9 +430,7 @@
         @media (min-width: 768px) {
           font-size: 70px !important;
         }
-        @media (min-width: 1030px) {
-          /*font-size: 90px !important;*/
-        }
+        @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
 
@@ -597,12 +463,7 @@
           transform: translate(12%, 63%);
           font-size: 63px;
         }
-        @media (min-width: 1030px) {
-          /*top: 0;*/
-          /*left: 52%;*/
-          /*transform: translate(10%, 62%);*/
-          /*font-size: 80px;*/
-        }
+        @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
 
@@ -625,7 +486,6 @@
 
       .about-me-main-text-age {
         margin-top: 30px;
-
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {}
@@ -660,19 +520,15 @@
         @media (min-width: 768px) {
           font-size: 55px;
         }
-        @media (min-width: 1030px) {
-          /*font-size: 70px;*/
-        }
+        @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
 
       .my-work-body {
         display: flex;
         flex-wrap: wrap;
-        /*margin: 0 50px;*/
         margin: 0 auto;
         justify-content: space-between;
-        /*gap: 70px 50px;*/
         margin-bottom: 40px;
 
         /* Extra small devices (phones, 600px and down) */
@@ -704,7 +560,6 @@
         font-style: normal;
         font-variation-settings: "wdth" 100;
 
-
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
           font-size: 20px;
@@ -716,34 +571,14 @@
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width: 768px) {
         }
-        @media (min-width: 1030px) {
-          /*font-size: 70px;*/
-        }
+        @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
       .scroll-container {
-        /*position: absolute;*/
         position: relative;
-        /*height: 100vh;*/
-        /*height: 350px;*/
         white-space: nowrap;
         overflow: hidden;
-        /*width: 1000px;*/
-
-
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
@@ -768,217 +603,70 @@
         @media (min-width: 1150px) {}
       }
 
-
       .photography-body-3 {
         top: 0;
         bottom: 0;
-
-
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-
-
-
         display: flex;
         width: 218%;
-        /*justify-content: space-between;*/
         justify-content: space-around;
-        /*justify-content: space-evenly;*/
         position: absolute;
-        /*height: 100%;*/
         animation: scroll2 64s linear infinite;
-        /*border: 1px solid green;*/
         animation-delay: 32s;
-        /*left: -218%;*/
-        /*left: -218%;*/
         left: 100%;
       }
 
       @keyframes scroll3 {
-
-
-
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-
-
-
-
-
         from {
-          /*left: -100%;*/
           left: -218%;
-          /*left: 0%;*/
         }
         to {
-          /*left: 109%;*/
           left: 218%;
-          /*left: 109%;*/
         }
       }
-
 
       .photography-body-2 {
         top: 0;
         bottom: 0;
-
-
-
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-
-
-
-
         display: flex;
         width: 218%;
-        /*justify-content: space-between;*/
         justify-content: space-around;
-        /*justify-content: space-evenly;*/
         position: absolute;
-        /*height: 100%;*/
         animation: scroll2 64s linear infinite;
-        /*border: 1px solid blue;*/
-        /*left: -218%;*/
-        /*left: -218%;*/
-        /*left: 100%;*/
         left: -218%;
       }
 
       @keyframes scroll2 {
-
-
-
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-
-
-
-
-
-
         from {
-          /*left: -100%;*/
           left: -218%;
-          /*left: 0%;*/
         }
         to {
-          /*left: 109%;*/
           left: 218%;
-          /*left: 109%;*/
         }
       }
-
 
       .photography-body-1 {
         top: 0;
         bottom: 0;
-
-
-
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-        /*IT WORKS NOW DONT BREAK IT*/
-
-
-
-
-
-
-
         display: flex;
         width: 109%;
-        /*justify-content: space-between;*/
         justify-content: space-around;
-        /*justify-content: space-evenly;*/
         position: absolute;
-        /*height: 100%;*/
         animation: scroll1 16s linear;
-        /*border: 1px solid red;*/
-        /*left: 0;*/
-        /*left: -109%;*/
         left: 109%;
       }
 
       @keyframes scroll1 {
-
-
-
-
-
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-      /*IT WORKS NOW DONT BREAK IT*/
-
-
-
-
-
         from {
           left: 0;
         }
         to {
-          /*left: 109%;*/
-          /*left: 0;*/
-          /*left: 109%;*/
           left: 109%;
         }
       }
 
-
       .photography-item-wrapper {
-        /*flex: 1;*/
         min-width: 0;
         margin: 5px;
-
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {}
@@ -992,39 +680,6 @@
         @media (min-width: 1150px) {}
       }
 
-
-      /*.photography-item-wrapper-1 {*/
-
-      /*  !* Extra small devices (phones, 600px and down) *!*/
-      /*  @media (max-width: 600px) {}*/
-      /*  !* Small devices (portrait tablets and large phones, 600px and up) *!*/
-      /*  @media (min-width: 600px) {*/
-      /*    margin-left: 20px;*/
-      /*  }*/
-      /*  !* Medium devices (landscape tablets, 768px and up) *!*/
-      /*  @media (min-width: 768px) {}*/
-      /*  @media (min-width: 1030px) {}*/
-      /*  @media (min-width: 1150px) {}*/
-      /*}*/
-
-      /*.photography-item-wrapper-2 {*/
-
-      /*  !* Extra small devices (phones, 600px and down) *!*/
-      /*  @media (max-width: 600px) {}*/
-      /*  !* Small devices (portrait tablets and large phones, 600px and up) *!*/
-      /*  @media (min-width: 600px) {*/
-      /*    margin-right: 20px;*/
-      /*  }*/
-      /*  !* Medium devices (landscape tablets, 768px and up) *!*/
-      /*  @media (min-width: 768px) {}*/
-      /*  @media (min-width: 1030px) {}*/
-      /*  @media (min-width: 1150px) {}*/
-      /*}*/
-
-
-
-
-
       .photography-item-top-margin {
         margin-top: 100px;
       }
@@ -1033,15 +688,6 @@
         width: 100%;
         border-radius: 13px;
       }
-
-
-
-
-
-
-
-
-
 
       .services-offered-texts-wrapper {
         font-weight: 600;
@@ -1069,18 +715,6 @@
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
-
-
-
-
-
-
-
-
-
-
-
-
 
       .services-offered-text {
         border-radius: 100px;
@@ -1120,21 +754,14 @@
         @media (min-width: 600px) {
           font-size: 12px;
         }
-
-
         /*SPECIAL BREAKPOINT*/
         @media (min-width: 650px) {
           font-size: 13px;
         }
-
-
         /*SPECIAL BREAKPOINT*/
         @media (min-width: 700px) {
           font-size: 14px;
         }
-
-
-
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width: 768px) {
           font-size: 15px;
@@ -1267,15 +894,7 @@
 
       .work-with-me-contact-me {
         cursor: pointer;
-
         pointer-events: none;
-
-        /*-webkit-touch-callout: none;*/
-        /*-webkit-user-select: none;*/
-        /*-khtml-user-select: none;*/
-        /*-moz-user-select: none;*/
-        /*-ms-user-select: none;*/
-        /*user-select: none;*/
 
         /* Extra small devices (phones, 600px and down) */
         @media (max-width: 600px) {
@@ -1283,7 +902,6 @@
           top: 34%;
           left: 52%;
           transform: translate(-50%, -50%);
-          /*width: 100%;*/
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media (min-width: 600px) {
@@ -1291,7 +909,6 @@
           top: 34%;
           left: 52%;
           transform: translate(-50%, -50%);
-          /*width: 100%;*/
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width: 768px) {
@@ -1299,14 +916,10 @@
           top: 34%;
           left: 50%;
           transform: translate(-50%, -50%);
-          /*width: 100%;*/
         }
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
       }
-
-
-
 
       .no-bottom-margin {
         /* Extra small devices (phones, 600px and down) */
@@ -1319,7 +932,6 @@
         @media (min-width: 768px) {}
         @media (min-width: 1030px) {}
         @media (min-width: 1150px) {}
-
       }
 
       .normal-flex-column {
@@ -1349,33 +961,6 @@
       <a href="#work-with-me" class="nav-link">WORK WITH ME!</a>
     </nav>
     <section class="hero">
-
-
-<!--      (most likely use Amazon S3 ! only 22 pence per year for me.) Vimeo Pro, Amazon S3, Microsoft Azure Media Services, Google Cloud Storage, and StreamingVideoProvider-->
-
-
-<!--      https://drive.google.com/file/d/1Cw8HHDkgH1ZRwwfAi1gJjgVNYhF8p38h/view?usp=drive_link-->
-
-<!--      <video controls>-->
-<!--&lt;!&ndash;        <source src="https://drive.google.com/uc?export=download&id=1Kyg0XBDSdVuFOFmrFC0qPEJfLCisLgmW" type='video/mp4'>&ndash;&gt;-->
-<!--        <source src="https://drive.google.com/uc?export=download&id=1Cw8HHDkgH1ZRwwfAi1gJjgVNYhF8p38h" type='video/mp4'>-->
-<!--      </video>-->
-
-
-
-
-<!--      THE BELOW VIDEOS ARE SMALL ENOUGH TO BE PART OF REPO!-->
-<!--      THE LIFEWORKS REPOS ARE PROBABLY A LOT LARGER THAN THIS ONE!-->
-<!--      SO THE WINTER WONDERLAND VIDEO IS ONLY 38 MB SO IT SHOULD BE FINE-->
-
-<!--      THE BELOW VIDEOS ARE SMALL ENOUGH TO BE PART OF REPO!-->
-<!--      THE LIFEWORKS REPOS ARE PROBABLY A LOT LARGER THAN THIS ONE!-->
-<!--      SO THE WINTER WONDERLAND VIDEO IS ONLY 38 MB SO IT SHOULD BE FINE-->
-
-
-<!--      "We recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended. Smaller repositories are faster to clone and easier to work with and maintain"-->
-<!--      https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github-->
-
       <img src="burger.png" class="burger" />
 
       <div class="hero-text-links">
@@ -1576,13 +1161,8 @@
         </div>
       </div>
     </section>
-
-
-
     <section id="photography" class="section-padding">
       <div class="shared-header">PHOTOGRAPHY</div>
-
-
       <div class="scroll-container">
         <div class="photography-body-3">
           <div class="photography-item-wrapper">
@@ -1666,12 +1246,7 @@
           </div>
         </div>
       </div>
-
-
     </section>
-
-
-
     <section id="services-offered" class="shared-skeleton section-padding">
       <div class="shared-skeleton-header">
         <div class="shared-header no-bottom-margin">SERVICES OFFERED</div>
@@ -1713,9 +1288,6 @@
           />
         </div>
         <div class="shared-skeleton-content">
-
-
-
           <div class="the-process-texts-arrows-wrapper">
             <div class="the-process-text-arrow-wrapper the-process-text-arrow-wrapper-1">
               <div class="the-process-text">
@@ -1744,9 +1316,6 @@
               <img src="process3.png" class="the-process-arrow" alt="Final Delivery & Launch" />
             </div>
           </div>
-
-
-
         </div>
       </div>
     </section>
@@ -1779,14 +1348,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
 
     <script>
       const sections = document.querySelectorAll("section");
@@ -1837,8 +1398,6 @@
 <!--      });-->
 <!--    </script>-->
 
-
-
     <script>
       const burger = document.querySelector('.burger');
       const nav = document.querySelector('nav');
@@ -1860,13 +1419,6 @@
         }
       });
     </script>
-
-
-
-
-
-
-
 
 <!--    <script>-->
 <!--      // document.querySelectorAll('.in-phone-video').forEach(video => {-->
@@ -1904,12 +1456,6 @@
 <!--        });-->
 <!--      });-->
 <!--    </script>-->
-
-
-
-
-
-
 
     <script>
       document.getElementById("lowResVideo1").addEventListener("click", function() {
@@ -1978,7 +1524,6 @@
       });
     </script>
 
-
     <script>
       document.getElementById("lowResVideo3").addEventListener("click", function() {
         let highResVideo = document.createElement("video");
@@ -2011,7 +1556,6 @@
         });
       });
     </script>
-
 
     <script>
       document.getElementById("lowResVideo4").addEventListener("click", function() {
@@ -2046,7 +1590,6 @@
       });
     </script>
 
-
     <script>
       document.getElementById("lowResVideo5").addEventListener("click", function() {
         let highResVideo = document.createElement("video");
@@ -2079,7 +1622,6 @@
         });
       });
     </script>
-
 
     <script>
       document.getElementById("lowResVideo6").addEventListener("click", function() {
@@ -2114,7 +1656,6 @@
       });
     </script>
 
-
     <script>
       document.getElementById("lowResVideo7").addEventListener("click", function() {
         let highResVideo = document.createElement("video");
@@ -2148,7 +1689,6 @@
       });
     </script>
 
-
     <script>
       document.getElementById("lowResVideo8").addEventListener("click", function() {
         let highResVideo = document.createElement("video");
@@ -2181,7 +1721,6 @@
         });
       });
     </script>
-
 
   </body>
 </html>
